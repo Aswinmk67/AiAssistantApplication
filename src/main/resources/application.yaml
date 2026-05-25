@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: AiAssistantApplication
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+server:
+  port : 8080
+
+gemini:
+  api:
+    baseUrl: ${GEMINI_BASE_URL}
+    model: ${GEMINI_MODEL}
