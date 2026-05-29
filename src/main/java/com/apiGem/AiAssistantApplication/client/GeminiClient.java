@@ -83,6 +83,8 @@ public class GeminiClient {
 		.map(g -> g.candidates().get(0).content().parts().get(0).text())
 		.map(json ->{
 				try {
+					System.out.println("RAW GEMINI RESPONSE:");
+					System.out.println(json);
 					json = json.replace("```json", "").replace("```", "").trim();
 					return objectMapper.readValue(json, PromptLogResponse.class);
 				} catch (Exception e) {
